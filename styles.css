@@ -1,72 +1,116 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0d1117; /* Dark BG like your logo */
-  color: white;
-  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
+/* Background */
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #262626);
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header */
 header {
+  text-align: center;
   padding: 20px;
 }
 
 .logo {
-  width: 100px;
+  width: 90px;
   margin-bottom: 10px;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin: 10px 0;
-  color: #ffffff;
+  color: #ff4d4d;
 }
 
-h1 span {
-  color: #ff3333; /* লাল টাচ */
+header p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* Navbar */
+nav {
+  text-align: center;
+  margin: 20px 0;
 }
 
 nav a {
+  color: #fff;
   margin: 0 15px;
   text-decoration: none;
-  color: #ff3333;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  margin: 20px auto;
+nav a:hover {
+  color: #ff4d4d;
+}
+
+/* Section */
+section {
+  margin: 30px auto;
   padding: 20px;
-  border-radius: 10px;
-  max-width: 400px;
-  text-align: left;
+  max-width: 950px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 77, 77, 0.4);
 }
 
-.card h2 {
-  color: #ff3333;
+section h2 {
+  color: #ff4d4d;
+  margin-bottom: 10px;
 }
 
-input, textarea {
+/* Tables */
+table {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background: #ff3333;
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+  background: rgba(255, 77, 77, 0.8);
+  color: #fff;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Join Button */
+.join-btn {
+  background: #ff4d4d;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
-  color: white;
+  transition: 0.3s;
 }
 
+.join-btn:hover {
+  background: #ff1a1a;
+}
+
+/* Footer */
 footer {
-  margin: 20px 0;
-  font-size: 14px;
-  color: #ccc;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #bbb;
 }
