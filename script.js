@@ -1,28 +1,36 @@
-// Countdown Timer (Next Match Example)
-function startCountdown() {
-  // Next Match time (today + 1 hour)
-  let matchTime = new Date();
-  matchTime.setHours(matchTime.getHours() + 1);
+// Menu Toggle
+document.getElementById("menuBtn").addEventListener("click", () => {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+});
 
-  let countdown = setInterval(function () {
-    let now = new Date().getTime();
-    let distance = matchTime - now;
+// Open Tab
+function openTab(tabId) {
+  document.getElementById(tabId).style.display = "block";
+}
 
-    if (distance < 0) {
-      clearInterval(countdown);
-      document.getElementById("countdown").innerHTML = "Match Started!";
-      return;
+// Countdown Timer
+function startCountdown(duration, display) {
+  let timer = duration, minutes, seconds;
+  setInterval(() => {
+    hours = parseInt(timer / 3600, 10);
+    minutes = parseInt((timer % 3600) / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = hours + ":" + minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      display.textContent = "Match Started!";
     }
-
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-      ("0" + hours).slice(-2) + ":" +
-      ("0" + minutes).slice(-2) + ":" +
-      ("0" + seconds).slice(-2);
   }, 1000);
 }
 
-startCountdown();
+window.onload = () => {
+  let countdownTime = 60 * 5; // 5 minutes
+  let display = document.querySelector('#timer');
+  startCountdown(countdownTime, display);
+};
