@@ -1,142 +1,67 @@
+/* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড ডার্ক */
 body {
-    background: #121212;  /* Dark background */
-    color: #fff;          /* Default text color white */
+    background: #121212;  /* ডার্ক গ্রে */
+    color: #fff;          /* টেক্সট সাদা */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
-.header {
-  background: #2c3e50;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+/* Navbar */
+.navbar {
+    background: #1e1e1e;  /* আরও ডার্ক */
+    color: #fff;
+    padding: 15px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 22px;
+/* Balance Box */
+.balance-box {
+    background: linear-gradient(135deg, #2196F3, #0D47A1); /* নীল গ্রেডিয়েন্ট */
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
-.header button {
-  font-size: 22px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Menu */
-.menu {
-  display: none;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.menu a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background: #eee;
-}
-
-/* Balance */
-.main-balance {
-  background: linear-gradient(135deg, #3498db, #2c3e50);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 16px;
-  margin: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-.main-balance p {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.action-btns {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.deposit, .withdraw {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.deposit { background: #27ae60; color: white; }
-.withdraw { background: #e74c3c; color: white; }
-
-/* Game list */
-.game-section {
-  margin: 20px;
-}
-
+/* Game List Card */
 .game-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: #1f1f1f;  /* ডার্ক গ্রে */
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, background 0.3s;
 }
 
-.game-card img {
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
-  margin-right: 12px;
+.game-card:hover {
+    transform: scale(1.02);
+    background: #2a2a2a;
 }
 
-/* Tab Content */
-.tab-content {
-  display: none;
-  margin: 20px;
-  padding: 15px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+/* Buttons */
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.countdown {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
+.deposit-btn {
+    background: #4CAF50;
+    color: #fff;
 }
 
-.schedule ul {
-  list-style: none;
-  padding: 0;
+.withdraw-btn {
+    background: #f44336;
+    color: #fff;
 }
 
-.schedule li {
-  padding: 6px;
-  background: #f1f1f1;
-  margin-bottom: 6px;
-  border-radius: 6px;
-}
-
-.leaderboard ol {
-  padding-left: 20px;
+button:hover {
+    opacity: 0.9;
 }
