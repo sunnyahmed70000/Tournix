@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tournix - PUBG Tournament</title>
+  
+  <!-- Stylesheet & Manifest -->
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-
-  <!-- ✅ Favicon -->
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
-
+  
+  <!-- Theme Color for browser UI -->
+  <meta name="theme-color" content="#ffcc00">
+  
   <style>
-    /* ======== Base Theme ======== */
+    /* ===== Base Theme ===== */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -30,12 +35,18 @@
       max-width: 900px;
       box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
     }
-    /* ======== Hero Section ======== */
+    
+    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #000, #222);
       text-align: center;
       padding: 50px 20px;
       border-bottom: 3px solid #ffcc00;
+    }
+    .hero img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 15px;
     }
     .hero h1 {
       font-size: 3rem;
@@ -45,12 +56,8 @@
       font-size: 1.2rem;
       color: #ddd;
     }
-    .hero img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 15px;
-    }
-    /* ======== Tables ======== */
+    
+    /* Tables */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -68,24 +75,16 @@
     tr:nth-child(even) {
       background: #141414;
     }
-    /* ======== Status Badges ======== */
+    
+    /* Status Badges */
     .status {
       padding: 5px 10px;
       border-radius: 8px;
       font-weight: bold;
     }
-    .upcoming {
-      background: #444;
-      color: #ffcc00;
-    }
-    .ongoing {
-      background: #ffcc00;
-      color: #000;
-    }
-    .finished {
-      background: #008000;
-      color: #fff;
-    }
+    .upcoming { background: #444; color: #ffcc00; }
+    .ongoing { background: #ffcc00; color: #000; }
+    .finished { background: #008000; color: #fff; }
   </style>
 </head>
 <body>
@@ -96,16 +95,16 @@
     <p>PUBG Mobile Tournament Platform</p>
   </header>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="card">
     <h2>About</h2>
-    <p>Join the ultimate PUBG tournaments, compete with the best and win exciting prizes!</p>
+    <p>Join the ultimate PUBG tournaments, compete with the best, and win exciting prizes!</p>
   </section>
 
-  <!-- ✅ Match Schedule -->
+  <!-- Match Schedule Section -->
   <section id="schedule" class="card">
     <h2>📅 Match Schedule</h2>
-    <table class="schedule-table">
+    <table>
       <thead>
         <tr>
           <th>Match</th>
@@ -145,7 +144,7 @@
     </table>
   </section>
 
-  <!-- ✅ Winner Leaderboard -->
+  <!-- Winner Leaderboard Section -->
   <section id="leaderboard" class="card">
     <h2>🏆 Winner Leaderboard</h2>
     <table class="leaderboard-table">
@@ -180,12 +179,13 @@
     </table>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="card">
     <h2>Contact</h2>
     <p>For queries, join our Discord or contact us via email.</p>
   </section>
 
+  <!-- Final script -->
   <script src="script.js"></script>
 </body>
 </html>
