@@ -1,7 +1,125 @@
-body { font-family: Arial, sans-serif; margin: 0; background:#f5f5f5; }
-header { background:#222; color:#fff; padding: 15px; }
-nav a { color:#fff; margin-right: 12px; text-decoration:none; }
-main { max-width: 800px; margin: 20px auto; padding: 10px; }
-section { background:#fff; margin-bottom:15px; padding:15px; border-radius:8px; }
-input, textarea, button { width:100%; padding:10px; margin:5px 0; border:1px solid #ddd; border-radius:6px; }
-button { background:#222; color:#fff; cursor:pointer; }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 15px 30px;
+  border-bottom: 2px solid #f1c40f;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f1c40f;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('pubg-bg.jpg') no-repeat center/cover;
+  color: white;
+  border-bottom: 3px solid #f1c40f;
+}
+.hero h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.hero h1 span {
+  color: #f1c40f;
+}
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+.hero .btn {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #f1c40f;
+  color: #0d0d0d;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.hero .btn:hover {
+  background: #d4ac0d;
+  transform: scale(1.05);
+}
+
+/* Card Section */
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 700px;
+  border-left: 5px solid #f1c40f;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.7);
+}
+.card h2 {
+  color: #f1c40f;
+  margin-bottom: 15px;
+}
+
+/* Form */
+form input, form textarea, form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+form input, form textarea {
+  background: #0d0d0d;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+form button {
+  background: #f1c40f;
+  color: #0d0d0d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:hover {
+  background: #d4ac0d;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  border-top: 2px solid #f1c40f;
+  color: #aaa;
+}
