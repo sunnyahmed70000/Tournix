@@ -10,24 +10,28 @@
 
   <!-- Header -->
   <header>
-    <img src="logo.png" alt="Tournix Logo" class="logo">
-    <h1>TOURNIX</h1>
-    <p>Free Fire Tournament Platform</p>
+    <div class="overlay"></div>
+    <div class="header-content">
+      <img src="logo.png" alt="Tournix Logo" class="logo">
+      <h1>TOURNIX ARENA</h1>
+      <p>Ultimate Free Fire Tournament Platform 🔥</p>
+      <a href="#tournaments" class="btn-main">Join Tournament</a>
+    </div>
   </header>
 
   <!-- Navigation -->
   <nav>
     <a href="#">Home</a>
-    <a href="#">Tournaments</a>
-    <a href="#">Leaderboard</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#tournaments">Tournaments</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Tournament Section -->
-  <section>
-    <h2>Upcoming Tournament</h2>
-    <p>Join the next Free Fire battle and prove your skills! 🔥</p>
+  <section id="tournaments">
+    <h2>Upcoming Tournaments</h2>
+    <p>Gear up for the next Free Fire battle and claim victory! 💀</p>
 
     <table>
       <tr>
@@ -54,9 +58,21 @@
     </table>
   </section>
 
+  <!-- Leaderboard -->
+  <section id="leaderboard">
+    <h2>Top Players 🏆</h2>
+    <ul class="leaderboard-list">
+      <li><span>🔥 PlayerX</span> - 250 pts</li>
+      <li><span>⚡ DarkHunter</span> - 220 pts</li>
+      <li><span>👑 KingOP</span> - 200 pts</li>
+      <li><span>💀 Shadow</span> - 180 pts</li>
+      <li><span>🐉 DragonBoy</span> - 150 pts</li>
+    </ul>
+  </section>
+
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Tournix | All Rights Reserved</p>
+  <footer id="contact">
+    <p>© 2025 Tournix Arena | All Rights Reserved</p>
   </footer>
 
 </body>
