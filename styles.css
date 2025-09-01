@@ -1,41 +1,97 @@
-/* Dark Theme Base */
+/* General Dark Theme */
 body {
   margin: 0;
   padding: 0;
-  background-color: #0d0d0d;
-  color: white;
-  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-}
-
-/* Logo */
-.logo {
-  width: 120px;
-  height: auto;
-  margin: 20px auto;
-  display: block;
 }
 
 /* Header */
 .header {
+  background: linear-gradient(90deg, #ff0040, #ff8000);
   padding: 20px;
 }
-
-/* Buttons */
-.btn {
-  background: linear-gradient(45deg, #ff0040, #ff8000);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  margin: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
+.site-title {
+  font-size: 48px;
+  margin: 0;
+}
+.subtitle {
+  font-size: 20px;
+  margin: 5px 0 0;
 }
 
-.btn:hover {
+/* Section Styling */
+section {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 64, 0.5);
+}
+
+/* Balance */
+.balance-section {
+  font-size: 24px;
+  color: #ff8000;
+}
+
+/* Countdown */
+#countdown {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff0040;
+}
+
+/* Prize Pool */
+.prize-section ul {
+  list-style: none;
+  padding: 0;
+}
+.prize-section li {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+/* Game List */
+.game-list .card {
+  background: #262626;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 150px;
+  transition: 0.3s;
+}
+.game-list .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px #ff0040;
+}
+
+/* Leaderboard */
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.leaderboard th, .leaderboard td {
+  padding: 10px;
+  border: 1px solid #333;
+}
+.leaderboard th {
+  background: #ff0040;
+}
+.leaderboard td {
+  background: #262626;
+}
+
+/* Schedule */
+.schedule ul {
+  list-style: none;
+  padding: 0;
+}
+.schedule li {
+  margin: 10px 0;
+  font-size: 18px;
 }
