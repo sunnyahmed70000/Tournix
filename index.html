@@ -3,77 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix - Free Fire Tournament</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tournix - Tournament Platform</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://i.ibb.co/4T6y6g0/bg-dark-fire.jpg') no-repeat center center/cover;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #ff0000;
+      text-shadow: 0px 0px 15px #ff0000;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff0000;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.9);
+      border-radius: 12px;
+      box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
+    }
+
+    section h2 {
+      color: #ff0000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      text-shadow: 0px 0px 10px #ff0000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    table th, table td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    table th {
+      background: #222;
+      color: #ff0000;
+    }
+
+    table tr:hover {
+      background: #2a2a2a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      margin-top: 30px;
+      border-top: 2px solid #ff0000;
+    }
+
+    footer a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="overlay"></div>
-    <div class="header-content">
-      <img src="logo.png" alt="Tournix Logo" class="logo">
-      <h1>TOURNIX ARENA</h1>
-      <p>Ultimate Free Fire Tournament Platform 🔥</p>
-      <a href="#tournaments" class="btn-main">Join Tournament</a>
-    </div>
+    <h1>Tournix</h1>
+    <p>Free Fire & PUBG Tournament Platform</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Schedule</a>
+      <a href="#">Leaderboard</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#">Home</a>
-    <a href="#tournaments">Tournaments</a>
-    <a href="#leaderboard">Leaderboard</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Tournament Section -->
-  <section id="tournaments">
-    <h2>Upcoming Tournaments</h2>
-    <p>Gear up for the next Free Fire battle and claim victory! 💀</p>
-
+  <section>
+    <h2>Match Schedule</h2>
     <table>
       <tr>
-        <th>Tournament</th>
-        <th>Entry Fee</th>
-        <th>Prize Pool</th>
+        <th>Match</th>
         <th>Date</th>
-        <th>Action</th>
+        <th>Time</th>
+        <th>Status</th>
       </tr>
       <tr>
-        <td>FF Battle #101</td>
-        <td>20৳</td>
-        <td>500৳</td>
-        <td>5 Sept 2025</td>
-        <td><button class="join-btn">Join Now</button></td>
+        <td>Match 1</td>
+        <td>02 Sept 2025</td>
+        <td>8:00 PM</td>
+        <td>Upcoming</td>
       </tr>
       <tr>
-        <td>FF Squad Clash</td>
-        <td>50৳</td>
-        <td>1200৳</td>
-        <td>7 Sept 2025</td>
-        <td><button class="join-btn">Join Now</button></td>
+        <td>Match 2</td>
+        <td>03 Sept 2025</td>
+        <td>8:00 PM</td>
+        <td>Ongoing</td>
+      </tr>
+      <tr>
+        <td>Match 3</td>
+        <td>04 Sept 2025</td>
+        <td>8:00 PM</td>
+        <td>Finished</td>
       </tr>
     </table>
   </section>
 
-  <!-- Leaderboard -->
-  <section id="leaderboard">
-    <h2>Top Players 🏆</h2>
-    <ul class="leaderboard-list">
-      <li><span>🔥 PlayerX</span> - 250 pts</li>
-      <li><span>⚡ DarkHunter</span> - 220 pts</li>
-      <li><span>👑 KingOP</span> - 200 pts</li>
-      <li><span>💀 Shadow</span> - 180 pts</li>
-      <li><span>🐉 DragonBoy</span> - 150 pts</li>
-    </ul>
+  <section>
+    <h2>Leaderboard</h2>
+    <table>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Kills</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>PlayerX</td>
+        <td>20</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>PlayerY</td>
+        <td>15</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>PlayerZ</td>
+        <td>10</td>
+        <td>100</td>
+      </tr>
+    </table>
   </section>
 
-  <!-- Footer -->
-  <footer id="contact">
-    <p>© 2025 Tournix Arena | All Rights Reserved</p>
-  </footer>
+  <section>
+    <h2>Contact</h2>
+    <p>For registration & queries: 
+      <a href="mailto:info@pubgtournament.com">info@pubgtournament.com</a>
+    </p>
+  </section>
 
+  <footer>
+    <p>© 2025 Tournix Tournament. All rights reserved. | Designed by Sunny</p>
+  </footer>
 </body>
 </html>
