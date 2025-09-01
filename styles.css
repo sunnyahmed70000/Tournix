@@ -32,6 +32,13 @@ header p {
   color: #bbb;
 }
 
+/* 🔥 Logo Style */
+.logo {
+  width: 180px;        /* Logo সাইজ */
+  display: block;
+  margin: 20px auto;   /* মাঝখানে আনার জন্য */
+}
+
 /* Navigation */
 nav {
   background: #111;
