@@ -7,24 +7,62 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
+  <!-- Header -->
+  <header class="header">
     <h1>Tournix</h1>
-    <div class="menu">☰</div>
-  </div>
+    <button id="menuBtn">☰</button>
+    <div id="menu" class="menu">
+      <a href="#">Logout</a>
+    </div>
+  </header>
 
-  <!-- Balance Card -->
-  <div class="card">
+  <!-- Main Balance -->
+  <section class="main-balance">
     <h2>Main Balance</h2>
-    <p class="balance">৳ 1200</p>
-    <button class="btn deposit">Deposit</button>
-    <button class="btn withdraw">Withdraw</button>
-  </div>
+    <p>৳ 1200</p>
+    <div class="action-btns">
+      <button class="deposit">Deposit</button>
+      <button class="withdraw">Withdraw</button>
+    </div>
+  </section>
 
   <!-- Game List -->
-  <h2>Game List</h2>
-  <div class="game-list">
-    <img src="game.png" alt="Game" />
-  </div>
-</body>
-</html>
+  <section class="game-section">
+    <h2>Game List</h2>
+
+    <div class="game-card" onclick="openTab('freefireTab')">
+      <img src="freefire.png" alt="Free Fire">
+      <div class="game-info">
+        <h3>Free Fire</h3>
+        <p>Tap to view matches</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Fire Tab -->
+  <section id="freefireTab" class="tab-content">
+    <h2>Free Fire Tournament</h2>
+
+    <!-- Countdown -->
+    <div class="countdown">
+      Match Starts in: <span id="timer">00:00:00</span>
+    </div>
+
+    <!-- Match Schedule -->
+    <div class="schedule">
+      <h3>Match Schedule</h3>
+      <ul>
+        <li>Match 1 - 5:00 PM</li>
+        <li>Match 2 - 6:00 PM</li>
+        <li>Match 3 - 7:00 PM</li>
+      </ul>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="leaderboard">
+      <h3>Leaderboard</h3>
+      <ol>
+        <li>Player 1 - 50 pts</li>
+        <li>Player 2 - 40 pts</li>
+        <li>Player 3 - 30 pts</li>
+      </ol>
