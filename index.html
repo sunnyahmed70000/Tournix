@@ -4,179 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tournix</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #222;
-      padding: 15px 20px;
-    }
-
-    .navbar h1 {
-      color: red;
-      font-size: 32px;
-      font-weight: bold;
-      margin: 0 auto;
-      font-family: "Trebuchet MS", sans-serif;
-      letter-spacing: 2px;
-    }
-
-    /* Menu */
-    .menu {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-    }
-
-    .menu button {
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      right: 20px;
-      top: 50px;
-      background: #333;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .dropdown a {
-      display: block;
-      padding: 10px 20px;
-      color: white;
-      text-decoration: none;
-      border-bottom: 1px solid #444;
-    }
-
-    .dropdown a:hover {
-      background: #e74c3c;
-    }
-
-    /* Card (Balance Section) */
-    .card {
-      background: linear-gradient(135deg, #3498db, #2c3e50);
-      padding: 30px;
-      margin: 20px;
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .card h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-    }
-
-    .balance {
-      font-size: 26px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    /* Buttons */
-    .btn {
-      border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 8px;
-      cursor: pointer;
-      color: #fff;
-      font-size: 16px;
-    }
-
-    .deposit {
-      background-color: #27ae60;
-    }
-
-    .withdraw {
-      background-color: #e74c3c;
-    }
-
-    /* Game List */
-    .game-list {
-      background: #1e1e1e;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-      border: 1px solid #333;
-    }
-
-    .game-list h2 {
-      color: #f39c12;
-      margin-bottom: 15px;
-    }
-
-    .game-list img {
-      max-width: 150px;
-      border-radius: 10px;
-    }
-
-    /* Popup */
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .popup-content {
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      width: 300px;
-    }
-
-    .popup-content h3 {
-      margin-bottom: 15px;
-    }
-
-    .popup-content input {
-      width: 90%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    .popup-content button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 5px;
-      font-size: 14px;
-    }
-
-    .close {
-      background: gray;
-      color: white;
-    }
-
-    .confirm {
-      background: green;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -209,10 +37,20 @@
   <div class="popup" id="popup">
     <div class="popup-content">
       <h3 id="popupTitle">Deposit</h3>
-      <input type="number" placeholder="Enter amount">
-      <br>
-      <button class="confirm">Confirm</button>
-      <button class="close" onclick="closePopup()">Close</button>
+      <form id="popupForm">
+        <input type="number" placeholder="Enter amount" required>
+        <select required>
+          <option value="">Select Payment Method</option>
+          <option value="bkash">bKash</option>
+          <option value="nagad">Nagad</option>
+          <option value="rocket">Rocket</option>
+        </select>
+        <input type="text" placeholder="Your Transaction ID" required>
+        <div class="popup-buttons">
+          <button type="submit" class="confirm">Confirm</button>
+          <button type="button" class="close" onclick="closePopup()">Close</button>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -224,7 +62,7 @@
 
     function logout() {
       alert("You have logged out!");
-      // এখানে চাইলে window.location.href = "login.html"; ব্যবহার করতে পারো
+      // window.location.href = "login.html";
     }
 
     function openPopup(type) {
@@ -235,6 +73,12 @@
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
+
+    document.getElementById("popupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("Request submitted successfully!");
+      closePopup();
+    });
   </script>
 
 </body>
