@@ -5,97 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tournix - Free Fire Tournament</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <h1 class="site-title">Tournix</h1>
-    <p class="subtitle">Free Fire Tournament</p>
+    <h1 class="logo">Tournix</h1>
+    <p class="tagline">Free Fire Tournament Platform</p>
   </header>
 
-  <!-- Main Balance -->
-  <section class="balance-section">
-    <h2>Main Balance: <span id="balance">৳ 500</span></h2>
-  </section>
-
-  <!-- Countdown -->
-  <section class="countdown-section">
-    <h2>Next Match Countdown</h2>
-    <div id="countdown">00:00:00</div>
-  </section>
-
-  <!-- Prize Pool -->
-  <section class="prize-section">
-    <h2>🏆 Prize Pool</h2>
-    <ul>
-      <li>1st Place - ৳1000</li>
-      <li>2nd Place - ৳500</li>
-      <li>3rd Place - ৳250</li>
-    </ul>
+  <!-- Balance Section -->
+  <section class="balance">
+    <h2>Main Balance: ৳500</h2>
   </section>
 
   <!-- Game List -->
-  <section class="game-list">
-    <h2>🎮 Game List</h2>
-    <div class="card">Free Fire</div>
-    <div class="card">PUBG Mobile</div>
-    <div class="card">COD Mobile</div>
+  <section class="games">
+    <h2>Available Games</h2>
+    <div class="game-list">
+      <div class="game-card">Free Fire</div>
+      <div class="game-card">PUBG Mobile</div>
+      <div class="game-card">Ludo</div>
+    </div>
+  </section>
+
+  <!-- Prize Pool -->
+  <section class="prize-pool">
+    <h2>🔥 Prize Pool 🔥</h2>
+    <p>Total Prize Today: ৳2000</p>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown">
+    <h2>Next Match Starts In:</h2>
+    <p id="timer">00:15:32</p>
   </section>
 
   <!-- Leaderboard -->
   <section class="leaderboard">
-    <h2>🏅 Leaderboard</h2>
-    <table>
-      <tr>
-        <th>Rank</th>
-        <th>Player</th>
-        <th>Points</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>PlayerX</td>
-        <td>150</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Shadow</td>
-        <td>120</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Killer</td>
-        <td>100</td>
-      </tr>
-    </table>
+    <h2>🏆 Leaderboard</h2>
+    <ul>
+      <li>1. PlayerOne - 120 pts</li>
+      <li>2. PlayerTwo - 100 pts</li>
+      <li>3. PlayerThree - 80 pts</li>
+    </ul>
   </section>
 
- <!-- Match Schedule -->
-<section class="schedule">
-  <h2>📅 Match Schedule</h2>
-
-  <div class="match-card">
-    <div class="match-header">
-      <img src="ludo.png" alt="Ludo" class="game-icon">
-      <div>
-        <h3>TODAY 1 VS 1 LUDO TOURNAMENT</h3>
-        <p class="time">⏰ 6:10 PM</p>
+  <!-- Match Schedule -->
+  <section class="matches">
+    <h2>📅 Match Schedule</h2>
+    <div class="match-card">
+      <div class="match-header">
+        <img src="logo.png" alt="Game Logo" class="match-logo">
+        <h3>TODAY 1 VS 1 FREE FIRE TOURNAMENT</h3>
+        <span class="match-time">6:10</span>
+      </div>
+      <div class="match-info">
+        <p><strong>Total Prize:</strong> ৳180</p>
+        <p><strong>Per Kill:</strong> ৳0</p>
+        <p><strong>Entry Fee:</strong> ৳100</p>
+        <p><strong>Entry Type:</strong> Solo</p>
+        <p><strong>Room ID:</strong> 2854</p>
+        <p><strong>Prize Pool:</strong> ৳180</p>
+      </div>
+      <div class="match-actions">
+        <button class="btn join">Participate</button>
+        <button class="btn info">Match Info</button>
       </div>
     </div>
+  </section>
 
-    <div class="match-info">
-      <p><strong>Total Prize:</strong> ৳180</p>
-      <p><strong>Per Kill:</strong> ৳0</p>
-      <p><strong>Entry Fee:</strong> ৳100</p>
-      <p><strong>Entry Type:</strong> Solo</p>
-      <p><strong>Board No:</strong> 2854</p>
-      <p><strong>Prize Pool:</strong> ৳180</p>
-    </div>
-
-    <div class="match-footer">
-      <button class="btn participate">Participate</button>
-      <button class="btn info">Match Info</button>
-    </div>
-  </div>
-
-</section>
+  <script src="script.js"></script>
+</body>
+</html>
