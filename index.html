@@ -8,29 +8,46 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <h1>Tournix</h1>
-    <div class="menu">
-      <button onclick="toggleMenu()">☰</button>
-      <div class="dropdown" id="dropdownMenu">
-        <a href="#" onclick="logout()">Logout</a>
+  <!-- Signup Page -->
+  <div class="login-container" id="signupPage">
+    <h1 class="login-title">Tournix - Signup</h1>
+    <form id="signupForm">
+      <input type="text" id="newUserId" placeholder="New User ID" required>
+      <input type="password" id="newPassword" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <!-- Login Page -->
+  <div class="login-container" id="loginPage" style="display:none;">
+    <h1 class="login-title">Tournix - Login</h1>
+    <form id="loginForm">
+      <input type="text" id="userid" placeholder="User ID" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>No account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+  </div>
+
+  <!-- Main Page (hidden before login) -->
+  <div id="mainPage" style="display:none;">
+    <div class="navbar">
+      <h1>Tournix</h1>
+      <div class="menu">
+        <button onclick="toggleMenu()">☰</button>
+        <div class="dropdown" id="dropdownMenu">
+          <a href="#" onclick="logout()">Logout</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Balance Card -->
-  <div class="card">
-    <h2>Main Balance</h2>
-    <p class="balance">৳ 500</p>
-    <button class="btn deposit" onclick="openPopup('Deposit')">Deposit</button>
-    <button class="btn withdraw" onclick="openPopup('Withdraw')">Withdraw</button>
-  </div>
-
-  <!-- Free Fire Game List -->
-  <div class="game-list">
-    <h2>Free Fire</h2>
-    <img src="freefire.png" alt="Free Fire">
+    <div class="card">
+      <h2>Main Balance</h2>
+      <p class="balance" id="balance">৳ 0</p>
+      <button class="btn deposit" onclick="openPopup('Deposit')">Deposit</button>
+      <button class="btn withdraw" onclick="openPopup('Withdraw')">Withdraw</button>
+    </div>
   </div>
 
   <!-- Popup -->
@@ -38,16 +55,16 @@
     <div class="popup-content">
       <h3 id="popupTitle">Deposit</h3>
       <form id="popupForm">
-        <input type="number" placeholder="Enter amount" required>
-        <select required>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+        <select id="method" required>
           <option value="">Select Payment Method</option>
           <option value="bkash">bKash</option>
           <option value="nagad">Nagad</option>
           <option value="rocket">Rocket</option>
         </select>
-        <input type="text" placeholder="Your Transaction ID" required>
+        <input type="text" id="trxid" placeholder="Transaction ID" required>
         <div class="popup-buttons">
-          <button type="submit" class="confirm">Confirm</button>
+          <button type="submit" class="confirm">Submit</button>
           <button type="button" class="close" onclick="closePopup()">Close</button>
         </div>
       </form>
@@ -55,16 +72,81 @@
   </div>
 
   <script>
+    let currentUser = null;
+
+    // Show/Hide Pages
+    function showLogin(){
+      document.getElementById("signupPage").style.display = "none";
+      document.getElementById("loginPage").style.display = "block";
+    }
+    function showSignup(){
+      document.getElementById("loginPage").style.display = "none";
+      document.getElementById("signupPage").style.display = "block";
+    }
+
+    // Signup
+    document.getElementById("signupForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      let uid = document.getElementById("newUserId").value;
+      let pass = document.getElementById("newPassword").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if(users[uid]){
+        alert("❌ User already exists!");
+        return;
+      }
+
+      users[uid] = {password: pass, balance: 0};
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("✅ Signup successful! Now login.");
+      showLogin();
+    });
+
+    // Login
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      let uid = document.getElementById("userid").value;
+      let pass = document.getElementById("password").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+
+      if(users[uid] && users[uid].password === pass){
+        currentUser = uid;
+        localStorage.setItem("loggedInUser", uid);
+        showMainPage();
+      } else {
+        alert("❌ Invalid UserID or Password");
+      }
+    });
+
+    // Show Main Page
+    function showMainPage(){
+      document.getElementById("signupPage").style.display = "none";
+      document.getElementById("loginPage").style.display = "none";
+      document.getElementById("mainPage").style.display = "block";
+
+      let users = JSON.parse(localStorage.getItem("users")) || {};
+      currentUser = localStorage.getItem("loggedInUser");
+      if(currentUser && users[currentUser]){
+        document.getElementById("balance").innerText = "৳ " + users[currentUser].balance;
+      }
+    }
+
+    // Logout
+    function logout(){
+      localStorage.removeItem("loggedInUser");
+      document.getElementById("mainPage").style.display = "none";
+      showLogin();
+    }
+
+    // Menu toggle
     function toggleMenu() {
       let menu = document.getElementById("dropdownMenu");
       menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 
-    function logout() {
-      alert("You have logged out!");
-      // window.location.href = "login.html";
-    }
-
+    // Popup
     function openPopup(type) {
       document.getElementById("popupTitle").innerText = type;
       document.getElementById("popup").style.display = "flex";
@@ -74,11 +156,35 @@
       document.getElementById("popup").style.display = "none";
     }
 
+    // Save Deposit/Withdraw Request
     document.getElementById("popupForm").addEventListener("submit", function(e){
       e.preventDefault();
-      alert("Request submitted successfully!");
+
+      let type = document.getElementById("popupTitle").innerText;
+      let amount = parseInt(document.getElementById("amount").value);
+      let method = document.getElementById("method").value;
+      let trxid = document.getElementById("trxid").value;
+
+      let requests = JSON.parse(localStorage.getItem("requests")) || [];
+      requests.push({
+        user: currentUser,
+        type: type,
+        amount: amount,
+        method: method,
+        trxid: trxid,
+        status: "pending"
+      });
+
+      localStorage.setItem("requests", JSON.stringify(requests));
+
+      alert("✅ " + type + " request submitted!");
       closePopup();
     });
+
+    // Auto login check
+    if(localStorage.getItem("loggedInUser")){
+      showMainPage();
+    }
   </script>
 
 </body>
