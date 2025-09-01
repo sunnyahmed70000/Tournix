@@ -3,63 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUBG Tournament</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png">
-
+  <title>Tournix</title>
   <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Logo -->
+  <img src="logo.png" alt="Tournament Logo" class="logo">
 
   <!-- Header -->
-  <header class="header">
-    <div class="header-content">
-      <img src="images/logo.png" alt="Tournament Logo" class="logo">
-      <h1 class="site-title">PUBG Tournament</h1>
-      <p class="site-subtitle">Play • Compete • Win</p>
-    </div>
+  <header>
+    <h1>Tournix</h1>
+    <p>PUBG Mobile Tournament Platform</p>
   </header>
 
-  <!-- Tournament Section -->
-  <section id="tournaments">
-    <h2>🏆 Upcoming Tournaments</h2>
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Schedule</a>
+    <a href="#">Leaderboard</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Match Schedule -->
+  <section class="schedule">
+    <h2>Match Schedule</h2>
     <table>
       <tr>
-        <th>Name</th>
+        <th>Match</th>
         <th>Date</th>
-        <th>Entry Fee</th>
-        <th>Prize</th>
+        <th>Time</th>
         <th>Status</th>
       </tr>
       <tr>
-        <td>Classic Squad Match</td>
-        <td>5 Sept 2025</td>
-        <td>20 Taka</td>
-        <td>400 Taka</td>
-        <td><span class="status upcoming">Upcoming</span></td>
+        <td>Match 1</td>
+        <td>02 Sept 2025</td>
+        <td>8:00 PM</td>
+        <td>Upcoming</td>
       </tr>
       <tr>
-        <td>Solo Deathmatch</td>
-        <td>2 Sept 2025</td>
-        <td>15 Taka</td>
-        <td>300 Taka</td>
-        <td><span class="status ongoing">Ongoing</span></td>
+        <td>Match 2</td>
+        <td>03 Sept 2025</td>
+        <td>8:00 PM</td>
+        <td>Ongoing</td>
       </tr>
       <tr>
-        <td>Team Battle</td>
-        <td>28 Aug 2025</td>
-        <td>25 Taka</td>
-        <td>500 Taka</td>
-        <td><span class="status finished">Finished</span></td>
+        <td>Match 3</td>
+        <td>04 Sept 2025</td>
+        <td>8:00 PM</td>
+        <td>Finished</td>
       </tr>
     </table>
   </section>
 
-  <!-- Leaderboard Section -->
-  <section id="leaderboard">
-    <h2>🔥 Leaderboard</h2>
+  <!-- Leaderboard -->
+  <section class="leaderboard">
+    <h2>Leaderboard</h2>
     <table>
       <tr>
         <th>Rank</th>
@@ -69,29 +68,34 @@
       </tr>
       <tr>
         <td>1</td>
-        <td>Sunny</td>
-        <td>25</td>
-        <td>120</td>
+        <td>PlayerX</td>
+        <td>20</td>
+        <td>200</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>Hasan</td>
-        <td>18</td>
-        <td>95</td>
+        <td>PlayerY</td>
+        <td>15</td>
+        <td>150</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>Rakib</td>
-        <td>15</td>
-        <td>80</td>
+        <td>PlayerZ</td>
+        <td>10</td>
+        <td>100</td>
       </tr>
     </table>
   </section>
 
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>For registration & queries: <a href="mailto:info@pubgtournament.com">info@pubgtournament.com</a></p>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 PUBG Tournament | All Rights Reserved</p>
+    <p>© 2025 PUBG Tournament. All rights reserved. | Designed by Sunny</p>
   </footer>
-
 </body>
 </html>
