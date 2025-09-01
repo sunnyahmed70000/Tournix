@@ -3,189 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix - PUBG Tournament</title>
-  
-  <!-- Stylesheet & Manifest -->
+  <title>PUBG Tournament</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  
-  <!-- Favicon -->
+
+  <!-- ✅ Favicon (browser tab icon) -->
   <link rel="icon" type="image/png" href="images/logo.png">
-  
-  <!-- Theme Color for browser UI -->
-  <meta name="theme-color" content="#ffcc00">
-  
-  <style>
-    /* ===== Base Theme ===== */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0d0d0d;
-      color: #f5f5f5;
-    }
-    h1, h2 {
-      color: #ffcc00;
-      text-align: center;
-    }
-    .card {
-      background: #1a1a1a;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 900px;
-      box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
-    }
-    
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #000, #222);
-      text-align: center;
-      padding: 50px 20px;
-      border-bottom: 3px solid #ffcc00;
-    }
-    .hero img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 15px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #ddd;
-    }
-    
-    /* Tables */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    th, td {
-      border: 1px solid #333;
-      padding: 12px;
-      text-align: center;
-    }
-    th {
-      background: #222;
-      color: #ffcc00;
-    }
-    tr:nth-child(even) {
-      background: #141414;
-    }
-    
-    /* Status Badges */
-    .status {
-      padding: 5px 10px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .upcoming { background: #444; color: #ffcc00; }
-    .ongoing { background: #ffcc00; color: #000; }
-    .finished { background: #008000; color: #fff; }
-  </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Tournix Logo">
-    <h1>Tournix</h1>
-    <p>PUBG Mobile Tournament Platform</p>
+  <!-- ✅ Logo -->
+  <img src="images/logo.png" class="logo" alt="Tournament Logo">
+
+  <!-- ✅ Header -->
+  <header>
+    <h1>PUBG Tournament</h1>
+    <p>Compete • Survive • Conquer</p>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="card">
-    <h2>About</h2>
-    <p>Join the ultimate PUBG tournaments, compete with the best, and win exciting prizes!</p>
-  </section>
+  <!-- ✅ Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- Match Schedule Section -->
-  <section id="schedule" class="card">
-    <h2>📅 Match Schedule</h2>
-    <table>
-      <thead>
+  <!-- ✅ Main Content -->
+  <div class="container">
+    <!-- Schedule -->
+    <section id="schedule">
+      <h2>Match Schedule</h2>
+      <table>
         <tr>
           <th>Match</th>
           <th>Date</th>
           <th>Time</th>
-          <th>Entry Fee</th>
-          <th>Prize Pool</th>
           <th>Status</th>
         </tr>
-      </thead>
-      <tbody>
         <tr>
-          <td>Match #1</td>
-          <td>02 Sep 2025</td>
+          <td>Match 1</td>
+          <td>02 Sept 2025</td>
           <td>8:00 PM</td>
-          <td>৳20</td>
-          <td>৳400</td>
           <td><span class="status upcoming">Upcoming</span></td>
         </tr>
         <tr>
-          <td>Match #2</td>
-          <td>03 Sep 2025</td>
-          <td>9:00 PM</td>
-          <td>৳30</td>
-          <td>৳600</td>
+          <td>Match 2</td>
+          <td>03 Sept 2025</td>
+          <td>8:00 PM</td>
           <td><span class="status ongoing">Ongoing</span></td>
         </tr>
         <tr>
-          <td>Match #3</td>
-          <td>04 Sep 2025</td>
-          <td>10:00 PM</td>
-          <td>৳50</td>
-          <td>৳1000</td>
+          <td>Match 3</td>
+          <td>04 Sept 2025</td>
+          <td>8:00 PM</td>
           <td><span class="status finished">Finished</span></td>
         </tr>
-      </tbody>
-    </table>
-  </section>
+      </table>
+    </section>
 
-  <!-- Winner Leaderboard Section -->
-  <section id="leaderboard" class="card">
-    <h2>🏆 Winner Leaderboard</h2>
-    <table class="leaderboard-table">
-      <thead>
+    <!-- Leaderboard -->
+    <section id="leaderboard">
+      <h2>Leaderboard</h2>
+      <table class="leaderboard-table">
         <tr>
           <th>Rank</th>
           <th>Player</th>
           <th>Kills</th>
-          <th>Reward</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>🥇 1st</td>
-          <td>ShadowHunter</td>
-          <td>12</td>
-          <td>৳200</td>
+          <th>Points</th>
         </tr>
         <tr>
-          <td>🥈 2nd</td>
-          <td>NoobSlayer</td>
-          <td>9</td>
-          <td>৳120</td>
+          <td>1</td>
+          <td>PlayerX</td>
+          <td>20</td>
+          <td>200</td>
         </tr>
         <tr>
-          <td>🥉 3rd</td>
-          <td>HeadshotKing</td>
-          <td>7</td>
-          <td>৳80</td>
+          <td>2</td>
+          <td>PlayerY</td>
+          <td>15</td>
+          <td>150</td>
         </tr>
-      </tbody>
-    </table>
-  </section>
+        <tr>
+          <td>3</td>
+          <td>PlayerZ</td>
+          <td>10</td>
+          <td>100</td>
+        </tr>
+      </table>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>For queries, join our Discord or contact us via email.</p>
-  </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For registration & queries: <a href="mailto:info@pubgtournament.com">info@pubgtournament.com</a></p>
+    </section>
+  </div>
 
-  <!-- Final script -->
-  <script src="script.js"></script>
+  <!-- ✅ Footer -->
+  <footer>
+    <p>© 2025 PUBG Tournament. All rights reserved. | Designed by Sunny</p>
+  </footer>
 </body>
 </html>
