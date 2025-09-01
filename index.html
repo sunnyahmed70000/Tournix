@@ -3,66 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Tournix - Dark Theme</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <h1>Tournix</h1>
-    <button id="menuBtn">☰</button>
-    <div id="menu" class="menu">
-      <a href="#">Logout</a>
-    </div>
-  </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>Tournix</h2>
+  </div>
 
-  <!-- Main Balance -->
-  <section class="main-balance">
-    <h2>Main Balance</h2>
-    <p>৳ 1200</p>
-    <div class="action-btns">
-      <button class="deposit">Deposit</button>
-      <button class="withdraw">Withdraw</button>
-    </div>
-  </section>
+  <!-- Balance Section -->
+  <div class="balance-box">
+    <h3>Main Balance</h3>
+    <h2>৳ 1200</h2>
+    <button class="deposit-btn">Deposit</button>
+    <button class="withdraw-btn">Withdraw</button>
+  </div>
 
   <!-- Game List -->
-  <section class="game-section">
-    <h2>Game List</h2>
-
-    <div class="game-card" onclick="openTab('freefireTab')">
-      <img src="freefire.png" alt="Free Fire">
-      <div class="game-info">
-        <h3>Free Fire</h3>
-        <p>Tap to view matches</p>
-      </div>
+  <h3 class="section-title">Game List</h3>
+  <div class="game-card">
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/2f/Free_Fire_logo.png" 
+         alt="Free Fire" width="60" style="margin-right: 15px;">
+    <div>
+      <h4>Free Fire</h4>
+      <p>Tap to view matches</p>
     </div>
-  </section>
-
-  <!-- Free Fire Tab -->
-  <section id="freefireTab" class="tab-content">
-    <h2>Free Fire Tournament</h2>
-
-    <!-- Countdown -->
-    <div class="countdown">
-      Match Starts in: <span id="timer">00:00:00</span>
-    </div>
-
-    <!-- Match Schedule -->
-    <div class="schedule">
-      <h3>Match Schedule</h3>
-      <ul>
-        <li>Match 1 - 5:00 PM</li>
-        <li>Match 2 - 6:00 PM</li>
-        <li>Match 3 - 7:00 PM</li>
-      </ul>
-    </div>
-
-    <!-- Leaderboard -->
-    <div class="leaderboard">
-      <h3>Leaderboard</h3>
-      <ol>
-        <li>Player 1 - 50 pts</li>
-        <li>Player 2 - 40 pts</li>
-        <li>Player 3 - 30 pts</li>
-      </ol>
+  </div>
+</body>
+</html>
