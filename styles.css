@@ -1,67 +1,94 @@
-/* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড ডার্ক */
+/* Body Dark Mode */
 body {
-    background: #121212;  /* ডার্ক গ্রে */
-    color: #fff;          /* টেক্সট সাদা */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111; /* Dark background */
+  color: #fff;
 }
 
 /* Navbar */
 .navbar {
-    background: #1e1e1e;  /* আরও ডার্ক */
-    color: #fff;
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c3e50;
+  padding: 15px;
+  position: relative;
 }
 
-/* Balance Box */
-.balance-box {
-    background: linear-gradient(135deg, #2196F3, #0D47A1); /* নীল গ্রেডিয়েন্ট */
-    color: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+.navbar h1 {
+  color: red;          /* লাল রঙ */
+  font-size: 30px;     /* বড় */
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  flex: 1;
 }
 
-/* Game List Card */
-.game-card {
-    background: #1f1f1f;  /* ডার্ক গ্রে */
-    color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s, background 0.3s;
+.navbar .menu {
+  position: absolute;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
 }
 
-.game-card:hover {
-    transform: scale(1.02);
-    background: #2a2a2a;
+/* Card (Balance Section) */
+.card {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.balance {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 /* Buttons */
-button {
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: bold;
+.btn {
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
 }
 
-.deposit-btn {
-    background: #4CAF50;
-    color: #fff;
+.deposit {
+  background-color: #27ae60;
 }
 
-.withdraw-btn {
-    background: #f44336;
-    color: #fff;
+.withdraw {
+  background-color: #e74c3c;
 }
 
-button:hover {
-    opacity: 0.9;
+/* Game List */
+.game-list {
+  background: #1e1e1e;              /* গাঢ় কালো */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* হালকা শ্যাডো */
+  border: 1px solid #333;           /* ডার্ক বর্ডার */
+}
+
+.game-list h2 {
+  color: #f39c12;    /* Free Fire টাইটেল গোল্ডেন রঙে */
+  margin-bottom: 15px;
+}
+
+.game-list img {
+  max-width: 150px;
+  border-radius: 10px;
 }
