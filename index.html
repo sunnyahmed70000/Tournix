@@ -1,50 +1,181 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tournix - PUBG Tournament</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    /* ======== Base Theme ======== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0d0d0d;
+      color: #f5f5f5;
+    }
+    h1, h2 {
+      color: #ffcc00;
+      text-align: center;
+    }
+    .card {
+      background: #1a1a1a;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+    }
+    /* ======== Hero Section ======== */
+    .hero {
+      background: linear-gradient(135deg, #000, #222);
+      text-align: center;
+      padding: 50px 20px;
+      border-bottom: 3px solid #ffcc00;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    /* ======== Tables ======== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #222;
+      color: #ffcc00;
+    }
+    tr:nth-child(even) {
+      background: #141414;
+    }
+    /* ======== Status Badges ======== */
+    .status {
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .upcoming {
+      background: #444;
+      color: #ffcc00;
+    }
+    .ongoing {
+      background: #ffcc00;
+      color: #000;
+    }
+    .finished {
+      background: #008000;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">⚔️ Tournix</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Welcome to <span>Tournix</span> 🎮</h1>
-    <p>Compete • Survive • Win Rewards</p>
-    <a href="#about" class="btn">Join Tournament</a>
-  </section>
+  <header class="hero">
+    <h1>Tournix</h1>
+    <p>PUBG Mobile Tournament Platform</p>
+  </header>
 
   <!-- About -->
   <section id="about" class="card">
     <h2>About</h2>
-    <p>🔥 PUBG Mobile tournaments আয়োজন করা হয় আমাদের প্ল্যাটফর্মে।  
-    এখানে প্রতিদিন নতুন ম্যাচ, এন্ট্রি ফি & প্রাইজপুল থাকবে।</p>
+    <p>Join the ultimate PUBG tournaments, compete with the best and win exciting prizes!</p>
+  </section>
+
+  <!-- ✅ Match Schedule -->
+  <section id="schedule" class="card">
+    <h2>📅 Match Schedule</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Match</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Entry Fee</th>
+          <th>Prize Pool</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Match #1</td>
+          <td>02 Sep 2025</td>
+          <td>8:00 PM</td>
+          <td>৳20</td>
+          <td>৳400</td>
+          <td><span class="status upcoming">Upcoming</span></td>
+        </tr>
+        <tr>
+          <td>Match #2</td>
+          <td>03 Sep 2025</td>
+          <td>9:00 PM</td>
+          <td>৳30</td>
+          <td>৳600</td>
+          <td><span class="status ongoing">Ongoing</span></td>
+        </tr>
+        <tr>
+          <td>Match #3</td>
+          <td>04 Sep 2025</td>
+          <td>10:00 PM</td>
+          <td>৳50</td>
+          <td>৳1000</td>
+          <td><span class="status finished">Finished</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ✅ Winner Leaderboard -->
+  <section id="leaderboard" class="card">
+    <h2>🏆 Winner Leaderboard</h2>
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>Kills</th>
+          <th>Reward</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🥇 1st</td>
+          <td>ShadowHunter</td>
+          <td>12</td>
+          <td>৳200</td>
+        </tr>
+        <tr>
+          <td>🥈 2nd</td>
+          <td>NoobSlayer</td>
+          <td>9</td>
+          <td>৳120</td>
+        </tr>
+        <tr>
+          <td>🥉 3rd</td>
+          <td>HeadshotKing</td>
+          <td>7</td>
+          <td>৳80</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="card">
     <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <p>For queries, join our Discord or contact us via email.</p>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 - Tournix | PUBG Tournaments with ❤️</p>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
