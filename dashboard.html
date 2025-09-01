@@ -2,52 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix - Admin Dashboard</title>
+  <title>Admin Dashboard - Tournix</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dashboard">
+<body>
+  <div class="dashboard">
+    <h1>Welcome, Admin 🎮</h1>
+    <button id="logoutBtn">Logout</button>
 
-  <!-- Top Navbar -->
-  <header class="admin-header">
-    <h1>Tournix Admin Panel</h1>
-    <button onclick="logout()">Logout</button>
-  </header>
+    <div class="panel">
+      <h2>Deposit Requests</h2>
+      <ul id="depositList"></ul>
+    </div>
 
-  <!-- Dashboard Content -->
-  <main class="admin-content">
-    <section class="card">
-      <h2>👥 Users</h2>
-      <p>Total Users: <span id="totalUsers">0</span></p>
-    </section>
+    <div class="panel">
+      <h2>Withdraw Requests</h2>
+      <ul id="withdrawList"></ul>
+    </div>
+  </div>
 
-    <section class="card">
-      <h2>💰 Deposits</h2>
-      <ul id="depositRequests"></ul>
-    </section>
-
-    <section class="card">
-      <h2>🏦 Withdraw Requests</h2>
-      <ul id="withdrawRequests"></ul>
-    </section>
-  </main>
-
-  <script>
-    // যদি লগইন ছাড়া কেউ ঢুকতে চায়
-    if (localStorage.getItem("isAdminLoggedIn") !== "true") {
-      window.location.href = "admin.html";
-    }
-
-    // Logout system
-    function logout() {
-      localStorage.removeItem("isAdminLoggedIn");
-      window.location.href = "admin.html"; 
-    }
-
-    // Fake demo data (পরের ধাপে DB/Firebase add করা যাবে)
-    document.getElementById("totalUsers").innerText = "12";
-    document.getElementById("depositRequests").innerHTML = "<li>User1 - ৳100</li><li>User2 - ৳200</li>";
-    document.getElementById("withdrawRequests").innerHTML = "<li>User3 - ৳150</li>";
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
