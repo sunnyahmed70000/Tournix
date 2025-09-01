@@ -3,199 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix - Tournament Platform</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    <body>
-  <header class="header">
-    <img src="logo.png" alt="Tournament Logo" class="logo">
-    <h1>Free Fire Tournament</h1>
-  </header>
-
-  <main class="content">
-    <button class="btn">Join Tournament</button>
-    <button class="btn">View Results</button>
-  </main>
-</body>
-
-    }
-
-    header {
-      background: rgba(0,0,0,0.8);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ff0000;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #ff0000;
-      text-shadow: 0px 0px 15px #ff0000;
-    }
-
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      margin: 0 10px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #ff0000;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: rgba(20, 20, 20, 0.9);
-      border-radius: 12px;
-      box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.4);
-    }
-
-    section h2 {
-      color: #ff0000;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
-      text-shadow: 0px 0px 10px #ff0000;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0;
-    }
-
-    table th, table td {
-      padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    table th {
-      background: #222;
-      color: #ff0000;
-    }
-
-    table tr:hover {
-      background: #2a2a2a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.8);
-      margin-top: 30px;
-      border-top: 2px solid #ff0000;
-    }
-
-    footer a {
-      color: #ff0000;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Tournix - Free Fire Tournament</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Tournix</h1>
-    <p>Free Fire & PUBG Tournament Platform</p>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Schedule</a>
-      <a href="#">Leaderboard</a>
-      <a href="#">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="site-title">Tournix</h1>
+    <p class="subtitle">Free Fire Tournament</p>
   </header>
 
-  <section>
-    <h2>Match Schedule</h2>
-    <table>
-      <tr>
-        <th>Match</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>Match 1</td>
-        <td>02 Sept 2025</td>
-        <td>8:00 PM</td>
-        <td>Upcoming</td>
-      </tr>
-      <tr>
-        <td>Match 2</td>
-        <td>03 Sept 2025</td>
-        <td>8:00 PM</td>
-        <td>Ongoing</td>
-      </tr>
-      <tr>
-        <td>Match 3</td>
-        <td>04 Sept 2025</td>
-        <td>8:00 PM</td>
-        <td>Finished</td>
-      </tr>
-    </table>
+  <!-- Main Balance -->
+  <section class="balance-section">
+    <h2>Main Balance: <span id="balance">৳ 500</span></h2>
   </section>
 
-  <section>
-    <h2>Leaderboard</h2>
+  <!-- Countdown -->
+  <section class="countdown-section">
+    <h2>Next Match Countdown</h2>
+    <div id="countdown">00:00:00</div>
+  </section>
+
+  <!-- Prize Pool -->
+  <section class="prize-section">
+    <h2>🏆 Prize Pool</h2>
+    <ul>
+      <li>1st Place - ৳1000</li>
+      <li>2nd Place - ৳500</li>
+      <li>3rd Place - ৳250</li>
+    </ul>
+  </section>
+
+  <!-- Game List -->
+  <section class="game-list">
+    <h2>🎮 Game List</h2>
+    <div class="card">Free Fire</div>
+    <div class="card">PUBG Mobile</div>
+    <div class="card">COD Mobile</div>
+  </section>
+
+  <!-- Leaderboard -->
+  <section class="leaderboard">
+    <h2>🏅 Leaderboard</h2>
     <table>
       <tr>
         <th>Rank</th>
         <th>Player</th>
-        <th>Kills</th>
         <th>Points</th>
       </tr>
       <tr>
         <td>1</td>
         <td>PlayerX</td>
-        <td>20</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>PlayerY</td>
-        <td>15</td>
         <td>150</td>
       </tr>
       <tr>
+        <td>2</td>
+        <td>Shadow</td>
+        <td>120</td>
+      </tr>
+      <tr>
         <td>3</td>
-        <td>PlayerZ</td>
-        <td>10</td>
+        <td>Killer</td>
         <td>100</td>
       </tr>
     </table>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>For registration & queries: 
-      <a href="mailto:info@pubgtournament.com">info@pubgtournament.com</a>
-    </p>
+  <!-- Match Schedule -->
+  <section class="schedule">
+    <h2>📅 Match Schedule</h2>
+    <ul>
+      <li>Match 1 - 5:00 PM</li>
+      <li>Match 2 - 7:00 PM</li>
+      <li>Final - 9:00 PM</li>
+    </ul>
   </section>
 
-  <footer>
-    <p>© 2025 Tournix Tournament. All rights reserved. | Designed by Sunny</p>
-  </footer>
 </body>
 </html>
