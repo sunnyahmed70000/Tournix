@@ -1,197 +1,63 @@
+/* General */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
 }
 
-/* Navbar */
-.navbar {
+/* Login Page */
+body.login-page {
+  background: #121212;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #222;
-  padding: 15px 20px;
-  position: relative;
-}
-
-.navbar h1 {
-  color: red;
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0 auto;
-  font-family: "Trebuchet MS", sans-serif;
-  letter-spacing: 2px;
-}
-
-/* Menu */
-.menu {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-
-.menu button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 40px;
-  background: #333;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.dropdown a {
-  display: block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid #444;
-}
-
-.dropdown a:hover {
-  background: #e74c3c;
-}
-
-/* Card (Balance Section) */
-.card {
-  background: linear-gradient(135deg, #3498db, #2c3e50);
-  padding: 30px;
-  margin: 20px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.card h2 {
-  margin: 0 0 10px;
-  font-size: 22px;
-}
-
-.balance {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-/* Buttons */
-.btn {
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 16px;
-}
-
-.deposit {
-  background-color: #27ae60;
-}
-
-.withdraw {
-  background-color: #e74c3c;
-}
-
-/* Game List */
-.game-list {
-  background: #1e1e1e;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-  border: 1px solid #333;
-}
-
-.game-list h2 {
-  color: #f39c12;
-  margin-bottom: 15px;
-}
-
-.game-list img {
-  max-width: 150px;
-  border-radius: 10px;
-}
-
-/* Popup */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  color: white;
 }
 
-.popup-content {
-  background: #222;
-  padding: 20px;
+.login-box {
+  background: #1e1e1e;
+  padding: 30px;
   border-radius: 10px;
+  width: 300px;
   text-align: center;
-  width: 320px;
-  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-.popup-content h3 {
-  margin-bottom: 15px;
-  color: red;
-  font-size: 24px;
+.login-box h1 {
+  margin-bottom: 20px;
+  color: #ff4444;
 }
 
-.popup-content input, 
-.popup-content select {
-  width: 90%;
-  padding: 8px;
-  margin: 8px 0;
-  border-radius: 6px;
+.login-box input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
   border: none;
   outline: none;
 }
 
-.popup-buttons {
+.login-box button {
+  background: #ff4444;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff5555;
   margin-top: 10px;
 }
 
-.popup-buttons button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 5px;
-  font-size: 14px;
-}
-
-.close {
-  background: gray;
-  color: white;
-}
-
-.confirm {
-  background: green;
-  color: white;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-/* Dashboard Style */
+/* Dashboard */
 body.dashboard {
   background: #121212;
   color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .admin-header {
