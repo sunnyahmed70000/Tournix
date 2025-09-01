@@ -1,119 +1,85 @@
-/* General Styles */
+/* General Style */
 body {
   font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
   margin: 0;
   padding: 0;
-}
-
-/* Header Section */
-.header {
-  background: linear-gradient(90deg, #000, #111, #1a1a1a);
-  padding: 20px;
-  border-bottom: 2px solid #f1c40f;
+  background: #f4f4f9;
+  color: #333;
   text-align: center;
 }
 
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Logo */
 .logo {
   width: 180px;
   display: block;
-  margin-bottom: 10px;
+  margin: 20px auto;
 }
 
-.site-title {
-  font-size: 2rem;
-  color: #f1c40f;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 5px 0;
+/* Header */
+header h1 {
+  font-size: 2.5em;
+  margin: 10px 0 5px;
 }
-
-.site-subtitle {
-  font-size: 1rem;
-  color: #bbb;
+header p {
+  font-size: 1.2em;
   margin: 0;
+  color: #666;
+}
+
+/* Navigation */
+nav {
+  background: #222;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* Sections */
 section {
-  margin: 20px auto;
+  margin: 30px auto;
+  width: 80%;
+  background: white;
   padding: 20px;
-  max-width: 800px;
-  background: #1a1a1a;
-  border: 2px solid #333;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+section h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
 }
 
-/* Headings */
-h2 {
-  color: #f1c40f;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* Tables */
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 15px;
 }
-
 table th, table td {
-  border: 1px solid #333;
+  border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
 }
-
 table th {
-  background: #222;
-  color: #f1c40f;
+  background: #333;
+  color: white;
 }
-
-table td {
-  background: #111;
-}
-
-/* Status Labels */
-.status {
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.upcoming {
-  background: #444;
-  color: #f1c40f;
-}
-
-.ongoing {
-  background: #f1c40f;
-  color: #000;
-}
-
-.finished {
-  background: #2ecc71;
-  color: #fff;
-}
-
-/* Icons in Headings */
-h2::before {
-  margin-right: 8px;
+table tr:nth-child(even) {
+  background: #f9f9f9;
 }
 
 /* Footer */
 footer {
-  text-align: center;
+  margin-top: 30px;
   padding: 15px;
-  margin-top: 20px;
-  background: #000;
-  border-top: 2px solid #f1c40f;
-  color: #bbb;
+  background: #222;
+  color: white;
+  font-size: 0.9em;
 }
