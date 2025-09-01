@@ -33,13 +33,18 @@
   </main>
 
   <script>
+    // যদি লগইন ছাড়া কেউ ঢুকতে চায়
+    if (localStorage.getItem("isAdminLoggedIn") !== "true") {
+      window.location.href = "admin.html";
+    }
+
     // Logout system
     function logout() {
       localStorage.removeItem("isAdminLoggedIn");
       window.location.href = "admin.html"; 
     }
 
-    // Fake demo data (later Firebase/database add করা যাবে)
+    // Fake demo data (পরের ধাপে DB/Firebase add করা যাবে)
     document.getElementById("totalUsers").innerText = "12";
     document.getElementById("depositRequests").innerHTML = "<li>User1 - ৳100</li><li>User2 - ৳200</li>";
     document.getElementById("withdrawRequests").innerHTML = "<li>User3 - ৳150</li>";
