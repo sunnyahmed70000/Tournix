@@ -2,37 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix - Admin Login</title>
+  <title>Admin Login - Tournix</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="login-page">
+<body>
   <div class="login-box">
-    <h1>Tournix Admin Login</h1>
-    <input type="text" id="username" placeholder="Admin Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <p id="error" class="error"></p>
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <input type="text" id="adminUsername" placeholder="Username" required>
+      <input type="password" id="adminPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="errorMsg" class="error"></p>
   </div>
 
-  <script>
-    function login() {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-
-      // Demo login (তুমি চাইলে এগুলো পরিবর্তন করতে পারবে)
-      if (username === "admin" && password === "1234") {
-        localStorage.setItem("isAdminLoggedIn", "true");
-        window.location.href = "dashboard.html";
-      } else {
-        document.getElementById("error").innerText = "❌ Wrong username or password!";
-      }
-    }
-
-    // যদি আগেই লগইন করা থাকে
-    if (localStorage.getItem("isAdminLoggedIn") === "true") {
-      window.location.href = "dashboard.html";
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
