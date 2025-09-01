@@ -1,101 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tournix</title>
-  <!-- CSS Link -->
+  <title>Tournix Tournament</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Logo -->
-  <img src="logo.png" alt="Tournament Logo" class="logo">
-
   <!-- Header -->
   <header>
-    <h1>Tournix</h1>
-    <p>PUBG Mobile Tournament Platform</p>
+    <img src="tournix-logo.png" alt="Tournix Logo" class="logo">
+    <h1>TOURNIX <span>TOURNAMENT</span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Schedule</a>
-    <a href="#">Leaderboard</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <!-- Match Schedule -->
-  <section class="schedule">
-    <h2>Match Schedule</h2>
-    <table>
-      <tr>
-        <th>Match</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Status</th>
-      </tr>
-      <tr>
-        <td>Match 1</td>
-        <td>02 Sept 2025</td>
-        <td>8:00 PM</td>
-        <td>Upcoming</td>
-      </tr>
-      <tr>
-        <td>Match 2</td>
-        <td>03 Sept 2025</td>
-        <td>8:00 PM</td>
-        <td>Ongoing</td>
-      </tr>
-      <tr>
-        <td>Match 3</td>
-        <td>04 Sept 2025</td>
-        <td>8:00 PM</td>
-        <td>Finished</td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- Leaderboard -->
-  <section class="leaderboard">
-    <h2>Leaderboard</h2>
-    <table>
-      <tr>
-        <th>Rank</th>
-        <th>Player</th>
-        <th>Kills</th>
-        <th>Points</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>PlayerX</td>
-        <td>20</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>PlayerY</td>
-        <td>15</td>
-        <td>150</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>PlayerZ</td>
-        <td>10</td>
-        <td>100</td>
-      </tr>
-    </table>
+  <!-- About -->
+  <section id="about" class="card">
+    <h2>About</h2>
+    <p>এখানে Tournament সম্পর্কে বিস্তারিত লিখুন। যেমন – Entry Fee, Rules, Prize Pool ইত্যাদি।</p>
   </section>
 
   <!-- Contact -->
-  <section class="contact">
+  <section id="contact" class="card">
     <h2>Contact</h2>
-    <p>For registration & queries: <a href="mailto:info@pubgtournament.com">info@pubgtournament.com</a></p>
+    <form>
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 PUBG Tournament. All rights reserved. | Designed by Sunny</p>
+    <p>© 2025 · Tournix</p>
   </footer>
 </body>
 </html>
