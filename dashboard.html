@@ -2,61 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin Dashboard</title>
-  <style>
-    body {
-      background: #181818;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #e74c3c;
-      padding: 15px;
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .container {
-      padding: 20px;
-    }
-    .card {
-      background: #222;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-    }
-    button {
-      padding: 8px 15px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .approve { background: #27ae60; color: white; }
-    .reject { background: #e74c3c; color: white; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournix - Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>🔐 Admin Dashboard</header>
+<body class="dashboard">
 
-  <div class="container">
-    <h2>Deposit Requests</h2>
-    <div class="card">
-      User: Sunny <br>
-      Amount: 100৳ <br><br>
-      <button class="approve">Approve</button>
-      <button class="reject">Reject</button>
-    </div>
+  <!-- Top Navbar -->
+  <header class="admin-header">
+    <h1>Tournix Admin Panel</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
 
-    <h2>Withdraw Requests</h2>
-    <div class="card">
-      User: Rakib <br>
-      Amount: 50৳ <br><br>
-      <button class="approve">Approve</button>
-      <button class="reject">Reject</button>
-    </div>
-  </div>
+  <!-- Dashboard Content -->
+  <main class="admin-content">
+    <section class="card">
+      <h2>👥 Users</h2>
+      <p>Total Users: <span id="totalUsers">0</span></p>
+    </section>
+
+    <section class="card">
+      <h2>💰 Deposits</h2>
+      <ul id="depositRequests"></ul>
+    </section>
+
+    <section class="card">
+      <h2>🏦 Withdraw Requests</h2>
+      <ul id="withdrawRequests"></ul>
+    </section>
+  </main>
+
+  <script>
+    // Logout system
+    function logout() {
+      localStorage.removeItem("isAdminLoggedIn");
+      window.location.href = "admin.html"; 
+    }
+
+    // Fake demo data (later Firebase/database add করা যাবে)
+    document.getElementById("totalUsers").innerText = "12";
+    document.getElementById("depositRequests").innerHTML = "<li>User1 - ৳100</li><li>User2 - ৳200</li>";
+    document.getElementById("withdrawRequests").innerHTML = "<li>User3 - ৳150</li>";
+  </script>
 </body>
 </html>
